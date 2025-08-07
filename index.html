@@ -1,99 +1,137 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Oh-Tae Jang | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* 기본 스타일 */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-
-    nav {
-      background-color: #333;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    #about {
-      background-color: #ffffff;
-    }
-
-    #projects, #contact {
-      background-color: #eaeaea;
-    }
-
-    h1, h2 {
-      color: #333;
-    }
-
-    .profile-pic {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oh-Tae Jang | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        nav {
+            background-color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+        }
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        header h1 {
+            margin-top: 1rem;
+            font-size: 2rem;
+        }
+        header h2 {
+            color: #666;
+            font-size: 1.2rem;
+        }
+        section {
+            padding: 2rem 5%;
+            max-width: 900px;
+            margin: auto;
+        }
+        section h3 {
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #000;
+            display: inline-block;
+        }
+        .update-box, .paper-box {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .update-date {
+            color: crimson;
+            font-weight: bold;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .social-icons img {
+            width: 25px;
+            margin: 0 10px;
+        }
+    </style>
 </head>
-
 <body>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav>
+        <div><strong>Oh-Tae Jang</strong></div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#updates">Updates</a>
+            <a href="#papers">Papers</a>
+        </div>
+    </nav>
 
-  <section id="about">
-    <h1>Oh-Tae Jang</h1>
-    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-    <p>I'm a SAR ATR researcher exploring domain generalization, clutter reduction, and interpretable feature learning using deep learning. I believe in creative, structured problem-solving and always ask: what’s the essential signal in all this noise?</p>
-  </section>
+    <header>
+        <img src="profile.jpg" alt="Profile Picture">
+        <h1>Oh-Tae Jang</h1>
+        <h2>PhD Student | SAR | AI for Remote Sensing</h2>
+        <div class="social-icons">
+            <a href="https://github.com/otaejang"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"></a>
+        </div>
+    </header>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>IRASNet: Domain-Generalized SAR ATR</li>
-      <li>SlotSAR: Unsupervised Target-Clutter Disentanglement</li>
-      <li>Wavelet + ViT Based Interpretable SAR Model</li>
-    </ul>
-  </section>
+    <section id="about">
+        <h3>About</h3>
+        <p>I am a SAR ATR researcher focusing on domain generalization, interpretable learning, and clutter reduction using deep learning. My research vision is to make radar-based recognition robust and explainable under extended operating conditions.</p>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: otaejang@something.com</p>
-    <p>GitHub: <a href="https://github.com/otaejang" target="_blank">github.com/otaejang</a></p>
-  </section>
+    <section id="updates">
+        <h3>Updates</h3>
+        <div class="update-box">
+            <span class="update-date">2025-08-07</span> One paper accepted at a top-tier radar conference 🚀🎯
+        </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Oh-Tae Jang</p>
-  </footer>
+    <section id="papers">
+        <h3>Papers</h3>
+        <div class="paper-box">
+            <strong>2025</strong> – <span style="color:purple">IRASNet: Interpretable Representation Learning for SAR ATR</span> (Under Review)
+        </div>
+        <div class="paper-box">
+            <strong>2025</strong> – SlotSAR: Slot Attention-based Target-Clutter Disentanglement in SAR Images
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Oh-Tae Jang. All rights reserved.
+    </footer>
 
 </body>
 </html>
