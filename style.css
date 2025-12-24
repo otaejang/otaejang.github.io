@@ -1,104 +1,173 @@
-:root {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --accent-color: #b3ffb3; /* 참고 사이트의 연두색 포인트 */
-    --secondary-text: #999;
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.container {
-    max-width: 900px; /* 전체 너비 제한 */
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* 네비게이션 */
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px 0;
-    font-size: 0.9rem;
-}
-
-.nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin-left: 20px;
-    opacity: 0.8;
-}
-
-.nav-links a:hover {
-    opacity: 1;
-}
-
-/* About 섹션: 핵심 */
-.about-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 60px 0;
-    gap: 40px;
-}
-
-.about-text {
-    flex: 2;
-}
-
-.about-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.last-name {
-    font-weight: 300;
-    color: #bbb;
-}
-
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.about-image img {
-    width: 280px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-/* 강조 텍스트 */
-strong {
-    color: var(--accent-color);
-    font-weight: 600;
-}
-
-/* 뉴스/섹션 공통 */
-.info-section {
-    margin-bottom: 50px;
-}
-
-.info-section h2 {
-    font-size: 1.8rem;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.news-item {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 15px;
-}
-
-.date {
-    min-width: 100px;
-    color: var(--secondary-text);
-    font-weight: bold;
-}
+:root{
+    --bg:#111;
+    --panel:#151515;
+    --text:#eaeaea;
+    --muted:#bdbdbd;
+    --accent:#8cff3b;
+    --accent2:#7be34b;
+    --border:#2b2b2b;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.55;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{color:#b6ff87}
+  .container{
+    max-width:1180px;
+    margin:0 auto;
+    padding:28px 22px 80px;
+  }
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:18px;
+  }
+  .iconbar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .iconbtn{
+    width:28px;height:28px;
+    display:inline-flex;align-items:center;justify-content:center;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:rgba(255,255,255,0.02);
+  }
+  .iconbtn svg{width:16px;height:16px;fill:var(--muted)}
+  .iconbtn:hover svg{fill:var(--text)}
+  .navlinks{
+    display:flex; gap:18px; align-items:center;
+    font-size:14px;
+  }
+  .navlinks a{color:var(--muted)}
+  .navlinks a.active{color:var(--accent)}
+  .navlinks a:hover{color:var(--text)}
+  .header{
+    display:grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap:28px;
+    align-items:start;
+    margin-top:10px;
+  }
+  h1{
+    font-size:46px;
+    margin:10px 0 10px;
+    letter-spacing:-0.5px;
+  }
+  h1 .last{font-weight:400; color:var(--muted)}
+  .lead p{margin:0 0 12px; color:var(--muted); font-size:15px}
+  .profile{
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    background:var(--panel);
+  }
+  .profile img{display:block; width:100%; height:auto}
+  .section{
+    margin-top:48px;
+  }
+  .section h2{
+    font-size:34px;
+    font-weight:500;
+    margin:0 0 18px;
+    letter-spacing:-0.2px;
+  }
+  .list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .row{
+    display:grid;
+    grid-template-columns: 140px 1fr;
+    gap:16px;
+    padding:8px 0;
+  }
+  .when{color:var(--muted); font-size:13px; padding-top:2px}
+  .row .title{color:var(--accent); font-size:14px}
+  .row .sub{color:var(--muted); font-size:13px}
+  .row .desc{color:var(--muted); font-size:14px}
+  .bullets{margin:6px 0 0 18px; color:var(--muted)}
+  .pub{
+    display:grid;
+    grid-template-columns: 520px 1fr;
+    gap:18px;
+    padding:14px 0;
+    border-top:1px solid rgba(255,255,255,0.03);
+  }
+  .pub:first-of-type{border-top:none}
+  .pubthumb{
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    background:#fff;
+  }
+  .pubthumb img{display:block; width:100%; height:auto}
+  .pubmeta .ptitle{
+    font-size:22px;
+    margin:2px 0 6px;
+  }
+  .pubmeta .pauth{
+    color:var(--muted);
+    font-size:14px;
+    margin:0 0 6px;
+  }
+  .pubmeta .pvenue{
+    color:var(--muted);
+    font-size:14px;
+    margin:0 0 10px;
+    font-style:italic;
+  }
+  .badge{
+    display:inline-block;
+    color:#ff4d4d;
+    font-weight:600;
+    margin-left:8px;
+    font-style:normal;
+  }
+  .btns{display:flex; gap:10px; flex-wrap:wrap}
+  .btn{
+    font-size:12px;
+    padding:7px 12px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    color:var(--text);
+    background:rgba(255,255,255,0.02);
+    letter-spacing:0.3px;
+  }
+  .btn:hover{border-color:#3a3a3a}
+  .honors{
+    margin-top:20px;
+  }
+  .honors .item{
+    margin:10px 0;
+    color:var(--text);
+  }
+  .honors .item .sub{
+    color:var(--muted);
+    margin-left:16px;
+  }
+  .footer{
+    margin-top:54px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+  }
+  .footer .iconbtn{width:64px;height:64px;border-radius:18px}
+  .footer .iconbtn svg{width:28px;height:28px}
+  @media (max-width: 980px){
+    .header{grid-template-columns:1fr; }
+    .pub{grid-template-columns:1fr}
+    h1{font-size:38px}
+  }
+  
