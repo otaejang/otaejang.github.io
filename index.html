@@ -1,59 +1,128 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark"> <head>
+<html lang="en" class="dark">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jang Oh Tae | Personal Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>MoonJeong Park | Academic Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #121212; color: #e5e7eb; font-family: 'Inter', sans-serif; }
+        .accent-green { color: #a3e635; }
+        .btn-outline { border: 1px solid #4b5563; padding: 2px 10px; border-radius: 4px; font-size: 0.75rem; transition: 0.3s; }
+        .btn-outline:hover { background-color: #374151; }
+    </style>
 </head>
-<body>
+<body class="max-w-4xl mx-auto px-6 py-12">
 
-<div class="container">
-    <nav class="navbar">
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#cv">Curriculum Vitae</a>
-            <a href="#publications">Publications</a>
-            <span class="settings-icon">⚙️</span>
-        </div>
+    <nav class="flex justify-end gap-6 text-sm mb-12 text-gray-400">
+        <a href="#about" class="hover:text-white accent-green">About</a>
+        <a href="#cv" class="hover:text-white">Curriculum Vitae</a>
+        <a href="#publications" class="hover:text-white">Publications</a>
+        <i class="fas fa-cog cursor-pointer"></i>
     </nav>
 
-    <main class="content">
-        <section id="about" class="about-section">
-            <div class="about-text">
-                <h1>Oh-Tae <span class="last-name">Jang</span></h1>
-                <div class="social-icons">
-                    <a href="https://github.com/otaejang">🐙</a>
-                    <a href="mailto:your-email@postech.ac.kr">📧</a>
-                    <a href="https://scholar.google.com/...">🎓</a>
-                </div>
-                
-                <p>
-                    I am a MS-PhD student at the <strong>IRAS Lab (Intelligent Radar Signal Processing Lab)</strong>, 
-                    under the guidance of <strong>Prof. Kyung-Tae Kim</strong>, within the Dept. of Electronic Engineering at <strong>POSTECH</strong>.
-                </p>
-                <p>
-                    My research interest lies in <strong>SAR imaging</strong>, specifically focused on domain generalization and clutter reduction for SAR-ATR. 
-                    I'm exploring ways to bridge the gap between synthetic and measured SAR data using deep learning.
-                </p>
-                <p class="hiring-text">
-                    I'm actively seeking opportunities for meaningful collaborations. If you find my work interesting, please don't hesitate to reach out.
-                </p>
-            </div>
-            <div class="about-image">
-                <img src="https://avatars.githubusercontent.com/u/136439287?v=4" alt="Jang Oh Tae">
-            </div>
-        </section>
+    <header class="flex flex-col md:flex-row gap-8 mb-16">
+        <div class="flex-1">
+            <h1 class="text-4xl font-bold mb-4">MoonJeong <span class="text-gray-400">Park</span></h1>
+            <p class="mb-4">
+                I am a Ph.D. student at the <span class="accent-green">POSTECH Machine Learning Lab</span>, under the guidance of Prof. <span class="accent-green">Dongwoo Kim</span>, within the Graduate School of Artificial Intelligence at POSTECH.
+            </p>
+            <p class="mb-4 text-gray-400">
+                My research interest lies in various aspects of machine learning, but not limited to, <strong>Graph Neural Network and Dynamical systems</strong>. I recently interested in interpreting deep learning network architectures through the lens of Ordinary Differential Equations (ODEs).
+            </p>
+            <p class="text-sm italic text-gray-500">I’m actively seeking opportunities for meaningful collaborations and internships.</p>
+        </div>
+        <div class="w-64">
+            <img src="images/profile.jpg" alt="MoonJeong Park" class="rounded-lg shadow-xl">
+        </div>
+    </header>
 
-        <section id="news" class="info-section">
-            <h2>News</h2>
-            <div class="news-item">
-                <span class="date">Jun 2025</span>
-                <p>🚀 A paper <strong>"IRASNet"</strong> is published in IEEE TAES.</p>
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 border-b border-gray-800 pb-2">News</h2>
+        <ul class="space-y-3 text-sm">
+            <li><span class="font-mono text-gray-500 mr-4">Jun 5, 2025</span> 📚 A paper challenging the belief about oversmoothing is on arXiv.</li>
+            <li><span class="font-mono text-gray-500 mr-4">Mar 3, 2025</span> 📚 Paper about Personalizing LLMs with graph CF is on arXiv.</li>
+            <li><span class="font-mono text-gray-500 mr-4">Jun 1, 2024</span> 📚 Paper about label smoothing in GNN uploaded to arXiv.</li>
+        </ul>
+    </section>
+
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 border-b border-gray-800 pb-2">Education</h2>
+        <div class="space-y-6 text-sm">
+            <div class="flex">
+                <div class="w-40 text-gray-500">Sep, 2022 - Present</div>
+                <div>
+                    <p class="accent-green font-semibold">Pohang University of Science and Technology (POSTECH)</p>
+                    <p>Ph.D. student in Computer Science and Engineering | Advisor: Dongwoo Kim</p>
+                </div>
             </div>
-            </section>
-    </main>
-</div>
+            <div class="flex">
+                <div class="w-40 text-gray-500">Mar, 2014 - Sep, 2019</div>
+                <div>
+                    <p class="accent-green font-semibold">Daegu Gyeongbuk Institute of Science and Technology (DGIST)</p>
+                    <p>B.S. in School of Undergraduate Studies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 border-b border-gray-800 pb-2">Experience</h2>
+        <div class="space-y-6 text-sm">
+            <div class="flex">
+                <div class="w-40 text-gray-500">Aug, 2020 - Jun, 2022</div>
+                <div>
+                    <p class="accent-green font-semibold">POSCO AI education program</p>
+                    <p class="italic text-gray-300">Teaching Assistant for machine learning and deep learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="mb-16">
+        <h2 class="text-2xl font-bold mb-6 border-b border-gray-800 pb-2">Publications</h2>
+        <p class="text-xs text-gray-500 mb-8">* indicates equal contribution.</p>
+        
+        <div class="flex flex-col md:flex-row gap-6 mb-12">
+            <div class="w-full md:w-1/3">
+                <img src="images/pub1.png" class="rounded border border-gray-700 w-full" alt="Publication visualization">
+            </div>
+            <div class="w-full md:w-2/3">
+                <h3 class="font-bold text-gray-100 mb-1">The Oversmoothing Fallacy: A Misguided Narrative in GNN Research</h3>
+                <p class="text-sm text-gray-400 mb-1">MoonJeong Park, Sunghyun Choi, Jaeseung Heo, Eunhyeok Park, and Dongwoo Kim</p>
+                <p class="text-sm font-semibold mb-3 text-gray-300">2025</p>
+                <div class="flex gap-2">
+                    <button class="btn-outline">ABSTRACT</button>
+                    <button class="btn-outline">PAPER</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-6 mb-12">
+            <div class="w-full md:w-1/3">
+                <img src="images/pub2.png" class="rounded border border-gray-700 w-full" alt="Publication visualization">
+            </div>
+            <div class="w-full md:w-2/3">
+                <h3 class="font-bold text-gray-100 mb-1">Mitigating Oversmoothing Through Reverse Process of GNNs</h3>
+                <p class="text-sm text-gray-400 mb-1">MoonJeong Park, Jaeseung Heo, and Dongwoo Kim</p>
+                <p class="text-sm italic text-blue-400 mb-1">ICML, 2024</p>
+                <p class="text-xs font-bold text-red-500 mb-3">Excellent Paper Award at BK21 Paper Award</p>
+                <div class="flex gap-2">
+                    <button class="btn-outline">ABSTRACT</button>
+                    <button class="btn-outline">PAPER</button>
+                    <button class="btn-outline">CODE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="flex justify-center gap-6 pt-12 border-t border-gray-800">
+        <a href="mailto:email@postech.ac.kr" class="text-3xl hover:text-white text-gray-500"><i class="fas fa-envelope"></i></a>
+        <a href="#" class="text-3xl hover:text-white text-gray-500"><i class="fab fa-google"></i></a>
+        <a href="#" class="text-3xl hover:text-white text-gray-500"><i class="fab fa-github"></i></a>
+        <a href="#" class="text-3xl hover:text-white text-gray-500"><i class="fab fa-linkedin"></i></a>
+    </footer>
 
 </body>
 </html>
