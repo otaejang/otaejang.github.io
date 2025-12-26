@@ -1,2 +1,2 @@
-# howaboutj.github.io
-howaboutj.github.io
+# otaejang.github.io
+otaejang.github.io
