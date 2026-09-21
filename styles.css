@@ -242,6 +242,21 @@ h1 .last{font-weight:400;color:var(--muted)}
   color:var(--muted);
 }
 
+.hidden{display:none !important;}
+
+.news-toggle{
+  margin-top:14px;
+  padding:8px 14px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--panel);
+  color:var(--text);
+  font:inherit;
+  cursor:pointer;
+}
+
+.news-toggle:hover{border-color:var(--accent);color:var(--accent);}
+
 /* In dark mode, keep publication links readable */
 :root:not([data-theme="light"]) .pub-list .plink{color:#4aa3ff;}
 
