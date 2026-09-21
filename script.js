@@ -55,6 +55,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    const newsToggle = document.getElementById('news-toggle');
+    if (newsToggle) {
+        newsToggle.addEventListener('click', () => {
+            const extraNews = document.querySelectorAll('.news-extra');
+            const isExpanded = newsToggle.getAttribute('aria-expanded') === 'true';
+
+            extraNews.forEach(item => item.classList.toggle('hidden', isExpanded));
+            newsToggle.setAttribute('aria-expanded', String(!isExpanded));
+            newsToggle.textContent = isExpanded ? 'See More' : 'See Less';
+        });
+    }
+
     const y = document.getElementById("year");
     if (y) {
         y.textContent = new Date().getFullYear();
